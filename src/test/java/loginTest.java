@@ -19,19 +19,20 @@ public class loginTest {
         public static void setupClass() {
         bUtil = new browserUtil();
         hM = new loginPage();
-        iP = new inventoryPage(); // One browser per test run
+        
     }
 
     @Before
     public void setup() {
         testPage = bUtil.newPage(); // Fresh page per test
+        iP = new inventoryPage(testPage); // One browser per test run will have multiple tabs when running all the tests at the same time
     }
 
     @Test
     public void login() {
         testPage.navigate(url);
         hM.login(testPage);
-        iP.checkOut(testPage, 1, 4, "Adam", "Kock", "123");
+        iP.checkOut(1, 4, "Adam", "Kock", "123");
     }
 
     @Test

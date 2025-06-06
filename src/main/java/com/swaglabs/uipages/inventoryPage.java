@@ -9,6 +9,8 @@ import com.swaglabs.BrowserUtil.screenshotUtil;
 
 public class inventoryPage {
     screenshotUtil sUtil = new screenshotUtil();
+
+    static Page page;
     /**
      * Check out with two items in the cart.
      *
@@ -19,7 +21,12 @@ public class inventoryPage {
      * @param lastName           Last name for checkout form
      * @param postalCode         Postal code for checkout form
      */
-    public void checkOut(Page page, int itemNumber, int itemNumber2, String firstName, String lastName, String postalCode){
+
+     public inventoryPage(Page page) {
+        this.page = page;
+    }
+     
+    public void checkOut( int itemNumber, int itemNumber2, String firstName, String lastName, String postalCode){
         addToCart(page, itemNumber, itemNumber2); //-> Add items to cart
         payForItems(page,firstName, lastName, postalCode); //-> Pay for items
     }
