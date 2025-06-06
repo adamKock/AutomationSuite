@@ -3,7 +3,7 @@ name: Scheduled Test Run
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # every day at 9am UTC
+    - cron: '35 10 * * *'  # every day at 9am UTC
   workflow_dispatch:      # optional: lets you trigger manually via UI
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Java (example)
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '22'
 
       - name: Run Tests
         run: mvn test  # replace with your actual test command
@@ -26,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: path/to/report
+          path: target/surefire-reports
