@@ -3,7 +3,7 @@ name: Scheduled Test Run
 
 on:
   schedule:
-    - cron: '35 10 * * *'  # every day at 9am UTC
+    - cron: '38 10 * * *'  # every day at 9am UTC
   workflow_dispatch:      # optional: lets you trigger manually via UI
 
 jobs:
