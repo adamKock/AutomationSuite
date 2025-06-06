@@ -7,7 +7,6 @@ import com.microsoft.playwright.options.AriaRole;
 
 
 public class loginPage {
-    Page page;
     private  String username = "standard_user";
     private  String password = "secret_sauce";
     static String url = "https://www.saucedemo.*"; 
