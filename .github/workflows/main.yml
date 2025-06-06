@@ -24,7 +24,7 @@ jobs:
         run: mvn test  # replace with your actual test command
 
       - name: Upload Reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: target/surefire-reports
