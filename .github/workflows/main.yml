@@ -1,0 +1,29 @@
+# .github/workflows/run-tests.yml
+name: Scheduled Test Run
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # every day at 9am UTC
+  workflow_dispatch:      # optional: lets you trigger manually via UI
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout suite
+        uses: actions/checkout@v3
+
+      - name: Set up Java (example)
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+
+      - name: Run Tests
+        run: mvn test  # replace with your actual test command
+
+      - name: Upload Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: path/to/report
