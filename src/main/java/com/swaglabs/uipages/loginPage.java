@@ -21,7 +21,7 @@ public class loginPage {
         assertThat(page).hasURL(Pattern.compile(url));
         String title = page.url();
         System.out.println(title);
-        
+
     }
     
 }

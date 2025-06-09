@@ -76,8 +76,40 @@ public class inventoryPage {
            sUtil.screenshotUtil(page, "z_to_a_" + System.currentTimeMillis() + ".png");
            System.out.println("Z-A Selected");
        }
+
+       public void removeFromBasket(Page page, int itemNumber, int itemNumber2){
+        Locator addToCart = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("ADD TO CART")).nth(itemNumber);
+        Locator addToCart1 = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("ADD TO CART")).nth(itemNumber2); 
+        Locator shoppingCartLink = page.locator(".shopping_cart_link");
+        int nthElement = addToCart.count()+addToCart1.count();
+        
+            for (int i = 0; i <=itemNumber2; i++) {
+                if(i==itemNumber){
+                    addToCart.click();
+                    System.out.println("Item 1 added to cart");
+                    Locator remove = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("REMOVE"));
+                    assertThat(remove).isVisible();
+                }if(i==itemNumber2){
+                    addToCart1.click();
+                    System.out.println("Item 2 added to cart");
+                    Locator remove1 = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("REMOVE")).nth(1);
+                    assertThat(remove1).isVisible();
+                } 
+            }
+            shoppingCartLink.click();
+            for(int i = nthElement; i>0; i--){
+                Locator remove = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("REMOVE")).nth(0);
+                remove.click(); 
+               
+            }System.out.println("Items removed from cart");
+            page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("CONTINUE SHOPPING")).click();
+        
+        }
+            
+            
+        }
        
-    }
+    
 
 
 

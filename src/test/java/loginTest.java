@@ -40,7 +40,14 @@ public class loginTest {
         testPage.navigate(url);
         hM.login(testPage);
         iP.sortItems(testPage);
-        
+
+    }
+
+    @Test
+    public void removeItemsFromCheckout(){
+        testPage.navigate(url);
+        hM.login(testPage);
+        iP.removeFromBasket(testPage, 1, 4);
     }
     
    

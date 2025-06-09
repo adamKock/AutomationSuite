@@ -14,7 +14,7 @@ public class browserUtil {
 
     public browserUtil() {
         this.playwright = Playwright.create();
-        this.browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+        this.browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         this.context = browser.newContext();
     }
 
