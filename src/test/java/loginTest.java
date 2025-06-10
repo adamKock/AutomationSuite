@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -14,6 +17,8 @@ public class loginTest {
     static loginPage hM; 
     static inventoryPage iP; 
     String url = "https://www.saucedemo.com/v1/";
+    List<String> items = Arrays.asList("Sauce Labs Fleece Jacket", "Sauce Labs Backpack");
+
 
       @BeforeClass
         public static void setupClass() {
@@ -32,7 +37,6 @@ public class loginTest {
     public void login() {
         testPage.navigate(url);
         hM.login(testPage);
-        iP.checkOut(1, 4, "Adam", "Kock", "123");
     }
 
     @Test
@@ -47,9 +51,19 @@ public class loginTest {
     public void removeItemsFromCheckout(){
         testPage.navigate(url);
         hM.login(testPage);
-        iP.removeFromBasket(testPage, 1, 4);
+        iP.removeFromBasket(testPage, items);
     }
     
+    @Test 
+    public void selectItemFromItemListAndPay(){
+        testPage.navigate(url);
+        hM.login(testPage);
+        iP.checkOut(testPage, items, "John", "Doe", "12345");
+       
+
+        
+
+    }
    
 
 
