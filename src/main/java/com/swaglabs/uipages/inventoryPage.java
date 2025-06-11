@@ -5,14 +5,14 @@ import java.util.List;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.SelectOption;
 import com.swaglabs.BrowserUtil.screenshotUtil;
 
-public class inventoryPage {
+public class InventoryPage {
     screenshotUtil sUtil = new screenshotUtil();
-
+    static checkOut checkOut = new checkOut();
+    static cart cartPge = new cart();
     static Page page;
     /**
      * Check out with two items in the cart.
@@ -25,25 +25,15 @@ public class inventoryPage {
      * @param postalCode         Postal code for checkout form
      */
 
-     public inventoryPage(Page page) {
+     public InventoryPage(Page page) {
         this.page = page;
     }
      
     public void checkOut(Page page, List<String> items, String firstName, String lastName, String postalCode) {
         selectItem(page, items);
-        goToCheckOut();
-        payForItems(page,firstName, lastName, postalCode); //-> Pay for items
-    }
+        cartPge.goToCheckOut(page);
+        checkOut.payForItems(page, firstName, lastName, postalCode);
 
-
-    public void payForItems(Page page, String firstName, String lastName, String postalCode){
-        page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).fill(firstName);
-        page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).fill(lastName);
-        page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Zip/Postal Code")).fill(postalCode);
-        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("CONTINUE")).click();
-        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("FINISH")).click();
-        assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("THANK YOU FOR YOUR ORDER"))).isVisible();
-        System.out.println("Order complete");
     }
 
     public void sortItems(Page page) throws InterruptedException{
@@ -60,11 +50,7 @@ public class inventoryPage {
             selectItem(page, items);
             goToCart();
             int itemSize = items.size();
-            for(int i = 0; i < itemSize; i++){
-                Locator removeButton = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Remove")).nth(0);
-                removeButton.click();
-            }
-        
+            cartPge.removeItemsFromCart(itemSize, page);
        }
 
        //custom method to get all items 
@@ -102,18 +88,18 @@ public class inventoryPage {
         return page.locator(".inventory_item_name").all(); // Returns a list of all item name locators
     }
 
-    public void goToCheckOut(){
-        Locator shoppingCartLink = page.locator(".shopping_cart_link");
-        String checkOutScreen = "Checkout: Your Information";
-        shoppingCartLink.click();
-        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("CHECKOUT")).click();
-        assertThat(page.getByText(checkOutScreen)).isVisible();
-    }
+    
 
     public void goToCart(){
+        openShoppingCart(); 
+    }
+
+    public void openShoppingCart(){
         Locator shoppingCartLink = page.locator(".shopping_cart_link");
         shoppingCartLink.click();
     }
+
+   
 
     
 
