@@ -35,7 +35,6 @@ public class inventoryPage {
         payForItems(page,firstName, lastName, postalCode); //-> Pay for items
     }
 
-   
 
     public void payForItems(Page page, String firstName, String lastName, String postalCode){
         page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).fill(firstName);
@@ -67,7 +66,7 @@ public class inventoryPage {
             }
         
        }
-       
+
        //custom method to get all items 
         public List<String> getAllItems(Page page) {
             Locator labels = page.locator(".inventory_item_name");
@@ -75,7 +74,6 @@ public class inventoryPage {
             List<String> labelList = new ArrayList<>();
                 for (int i = 0; i < labels.count(); i++) {
                     String textContent = labels.nth(i).textContent();
-                    System.out.println(textContent);
                     labelList.add(textContent);
     }
     return labelList;
@@ -116,6 +114,7 @@ public class inventoryPage {
         Locator shoppingCartLink = page.locator(".shopping_cart_link");
         shoppingCartLink.click();
     }
+
     
 
 

@@ -1,0 +1,5 @@
+com/swaglabs/BrowserUtil/browserUtil.class
+com/swaglabs/Main.class
+com/swaglabs/BrowserUtil/screenshotUtil.class
+com/swaglabs/uipages/loginPage.class
+com/swaglabs/uipages/inventoryPage.class
