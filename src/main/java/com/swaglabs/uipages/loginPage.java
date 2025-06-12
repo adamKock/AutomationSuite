@@ -25,7 +25,7 @@ public class loginPage {
         System.out.println(title);
         }
 
-        public void loginInvalidCredentials(Page page, String userName, String password){
+        public void loginInvalidCredentials(String userName, String password){
             page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("username")).fill(userName);
             page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("password")).fill(password);
             page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("LOGIN")).click();

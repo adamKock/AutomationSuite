@@ -73,8 +73,8 @@ public class InventoryPage {
 
     //custom method to take in a list of strings (Item names) then add them all to the cart
     public void selectItem(List<String> items) {
-        List<Locator> labelList = getItemLabels(page);
-        List<Locator> containerList = getItemContainers(page);
+        List<Locator> labelList = getItemLabels();
+        List<Locator> containerList = getItemContainers();
     
         for (int i = 0; i < labelList.size(); i++) {
             String itemName = labelList.get(i).textContent().trim();
@@ -87,10 +87,10 @@ public class InventoryPage {
         }
     }
 
-    public List<Locator> getItemContainers(Page page) {
+    public List<Locator> getItemContainers() {
         return page.locator(".inventory_item").all(); // Returns all parent containers for inventory items
     }
-    public List<Locator> getItemLabels(Page page) {
+    public List<Locator> getItemLabels( ) {
         return page.locator(".inventory_item_name").all(); // Returns a list of all item name locators
     }
 
