@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="loginTest" time="7.474" tests="7" errors="4" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="loginTest" time="5.804" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/test-classes:/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/classes:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/playwright/1.51.0/playwright-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/Users/adamkockelbergh/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/adamkockelbergh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver/1.51.0/driver-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver-bundle/1.51.0/driver-bundle-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/adamkockelbergh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/test-classes:/Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/classes:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/playwright/1.51.0/playwright-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/Users/adamkockelbergh/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/adamkockelbergh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver/1.51.0/driver-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver-bundle/1.51.0/driver-bundle-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/adamkockelbergh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
@@ -12,11 +12,11 @@
     <property name="user.country" value="NZ"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/surefire/surefirebooter-20250611151810711_3.jar /Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/surefire 2025-06-11T15-18-10_518-jvmRun1 surefire-20250611151810711_1tmp surefire_0-20250611151810711_2tmp"/>
+    <property name="sun.java.command" value="/Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/surefire/surefirebooter-20250612091556003_3.jar /Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/surefire 2025-06-12T09-15-55_933-jvmRun1 surefire-20250612091556003_1tmp surefire_0-20250612091556003_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="loginTest"/>
-    <property name="surefire.test.class.path" value="/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/test-classes:/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/classes:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/playwright/1.51.0/playwright-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/Users/adamkockelbergh/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/adamkockelbergh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver/1.51.0/driver-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver-bundle/1.51.0/driver-bundle-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/adamkockelbergh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="test" value="loginTest#login"/>
+    <property name="surefire.test.class.path" value="/Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/test-classes:/Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/classes:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/playwright/1.51.0/playwright-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/google/code/gson/gson/2.12.1/gson-2.12.1.jar:/Users/adamkockelbergh/.m2/repository/com/google/errorprone/error_prone_annotations/2.36.0/error_prone_annotations-2.36.0.jar:/Users/adamkockelbergh/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver/1.51.0/driver-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/com/microsoft/playwright/driver-bundle/1.51.0/driver-bundle-1.51.0.jar:/Users/adamkockelbergh/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/adamkockelbergh/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/adamkockelbergh"/>
     <property name="user.language" value="en"/>
@@ -24,13 +24,13 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs"/>
+    <property name="basedir" value="/Users/adamkockelbergh/Documents/swaglabstest/swaglabs"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs/target/surefire/surefirebooter-20250611151810711_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/adamkockelbergh/Documents/swaglabstest/swaglabs/target/surefire/surefirebooter-20250612091556003_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="22.0.2+9-70"/>
@@ -46,7 +46,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/lz/wdv8tvcn2rj011k4px5t64cm0000gn/T/"/>
     <property name="java.version" value="22.0.2"/>
-    <property name="user.dir" value="/Users/adamkockelbergh/Desktop/swaglabstest/swaglabs"/>
+    <property name="user.dir" value="/Users/adamkockelbergh/Documents/swaglabstest/swaglabs"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
@@ -60,156 +60,7 @@
     <property name="java.class.version" value="66.0"/>
     <property name="argLine" value="--enable-preview"/>
   </properties>
-  <testcase name="buyAllItemsFromSite" classname="loginTest" time="1.676">
-    <error message="Cannot invoke &quot;com.swaglabs.uipages.cart.goToCheckOut()&quot; because &quot;com.swaglabs.uipages.InventoryPage.cart&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.swaglabs.uipages.cart.goToCheckOut()" because "com.swaglabs.uipages.InventoryPage.cart" is null
-	at com.swaglabs.uipages.InventoryPage.checkOut(InventoryPage.java:34)
-	at loginTest.buyAllItemsFromSite(loginTest.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></error>
-    <system-out><![CDATA[https://www.saucedemo.com/v1/inventory.html
-Total labels found: 6
-Item Sauce Labs Backpack added to cart
-Item Sauce Labs Bike Light added to cart
-Item Sauce Labs Bolt T-Shirt added to cart
-Item Sauce Labs Fleece Jacket added to cart
-Item Sauce Labs Onesie added to cart
-Item Test.allTheThings() T-Shirt (Red) added to cart
-]]></system-out>
-  </testcase>
-  <testcase name="selectItemFromItemListAndPay" classname="loginTest" time="0.363">
-    <error message="Cannot invoke &quot;com.swaglabs.uipages.cart.goToCheckOut()&quot; because &quot;com.swaglabs.uipages.InventoryPage.cart&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.swaglabs.uipages.cart.goToCheckOut()" because "com.swaglabs.uipages.InventoryPage.cart" is null
-	at com.swaglabs.uipages.InventoryPage.checkOut(InventoryPage.java:34)
-	at loginTest.selectItemFromItemListAndPay(loginTest.java:63)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></error>
-    <system-out><![CDATA[https://www.saucedemo.com/v1/inventory.html
-]]></system-out>
-  </testcase>
-  <testcase name="sort" classname="loginTest" time="1.614">
-    <system-out><![CDATA[https://www.saucedemo.com/v1/inventory.html
-Low to high selected
-Z-A Selected
-]]></system-out>
-  </testcase>
-  <testcase name="login" classname="loginTest" time="0.316">
-    <system-out><![CDATA[https://www.saucedemo.com/v1/inventory.html
-]]></system-out>
-  </testcase>
-  <testcase name="removeItemsFromCheckout" classname="loginTest" time="0.534">
-    <error message="Cannot invoke &quot;com.swaglabs.uipages.cart.removeItemsFromCart(int)&quot; because &quot;com.swaglabs.uipages.InventoryPage.cart&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.swaglabs.uipages.cart.removeItemsFromCart(int)" because "com.swaglabs.uipages.InventoryPage.cart" is null
-	at com.swaglabs.uipages.InventoryPage.removeFromBasket(InventoryPage.java:53)
-	at loginTest.removeItemsFromCheckout(loginTest.java:56)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></error>
-    <system-out><![CDATA[https://www.saucedemo.com/v1/inventory.html
-]]></system-out>
-  </testcase>
-  <testcase name="logingWithInvalidCredentials" classname="loginTest" time="0.235">
-    <system-out><![CDATA[https://www.saucedemo.com/v1/
-]]></system-out>
-  </testcase>
-  <testcase name="checkOutWithNoItems" classname="loginTest" time="0.323">
-    <error message="Cannot invoke &quot;com.swaglabs.uipages.cart.goToCheckOut()&quot; because &quot;com.swaglabs.uipages.InventoryPage.cart&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.swaglabs.uipages.cart.goToCheckOut()" because "com.swaglabs.uipages.InventoryPage.cart" is null
-	at com.swaglabs.uipages.InventoryPage.checkOut(InventoryPage.java:34)
-	at loginTest.checkOutWithNoItems(loginTest.java:86)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></error>
+  <testcase name="login" classname="loginTest" time="1.543">
     <system-out><![CDATA[https://www.saucedemo.com/v1/inventory.html
 ]]></system-out>
   </testcase>

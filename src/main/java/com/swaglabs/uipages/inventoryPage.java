@@ -11,9 +11,8 @@ import com.swaglabs.BrowserUtil.screenshotUtil;
 
 public class InventoryPage {
     screenshotUtil sUtil = new screenshotUtil();
-    static checkOut checkOut = new checkOut();
-    static cart cartPge = new cart();
-    static Page page;
+    
+    
     /**
      * Check out with two items in the cart.
      *
@@ -24,19 +23,26 @@ public class InventoryPage {
      * @param lastName           Last name for checkout form
      * @param postalCode         Postal code for checkout form
      */
+    private final Page page;
+    private final checkOut checkOut;
+    private final cartPage cartPge; 
 
      public InventoryPage(Page page) {
-        this.page = page;
+    this.page = page; // Ensures 'page' is assigned
+    this.checkOut = new checkOut(page);
+    this.cartPge = new cartPage(page);
     }
+    
      
-    public void checkOut(Page page, List<String> items, String firstName, String lastName, String postalCode) {
-        selectItem(page, items);
-        cartPge.goToCheckOut(page);
-        checkOut.payForItems(page, firstName, lastName, postalCode);
+    public void checkOut(List<String> items, String firstName, String lastName, String postalCode) {
+        selectItem(items);
+        openShoppingCart();
+        cartPge.goToCheckOut();
+        checkOut.payForItems( firstName, lastName, postalCode);
 
     }
 
-    public void sortItems(Page page) throws InterruptedException{
+    public void sortItems() throws InterruptedException{
            page.getByRole(AriaRole.COMBOBOX).selectOption(new SelectOption().setLabel("Price (low to high)"));
            sUtil.screenshotUtil(page, "low_to_high_" + System.currentTimeMillis() + ".png");
            System.out.println("Low to high selected");
@@ -46,15 +52,15 @@ public class InventoryPage {
            System.out.println("Z-A Selected");
        }
 
-       public void removeFromBasket(Page page, List<String> items) {
-            selectItem(page, items);
+       public void removeFromBasket(List<String> items) {
+            selectItem(items);
             goToCart();
             int itemSize = items.size();
-            cartPge.removeItemsFromCart(itemSize, page);
+            cartPge.removeItemsFromCart(itemSize);
        }
 
        //custom method to get all items 
-        public List<String> getAllItems(Page page) {
+        public List<String> getAllItems() {
             Locator labels = page.locator(".inventory_item_name");
             System.out.println("Total labels found: " + labels.count());
             List<String> labelList = new ArrayList<>();
@@ -66,7 +72,7 @@ public class InventoryPage {
 }
 
     //custom method to take in a list of strings (Item names) then add them all to the cart
-    public void selectItem(Page page, List<String> items) {
+    public void selectItem(List<String> items) {
         List<Locator> labelList = getItemLabels(page);
         List<Locator> containerList = getItemContainers(page);
     
