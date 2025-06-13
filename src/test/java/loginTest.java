@@ -7,19 +7,20 @@ import org.junit.Test;
 
 import com.microsoft.playwright.Page;
 import com.swaglabs.BrowserUtil.browserUtil;
+import com.swaglabs.uipages.CartPage;
+import com.swaglabs.uipages.CheckOut;
 import com.swaglabs.uipages.InventoryPage;
-import com.swaglabs.uipages.cartPage;
-import com.swaglabs.uipages.checkOut;
-import com.swaglabs.uipages.loginPage;
+import com.swaglabs.uipages.LoginPage;
+
 
 //next time need to not rely on passing in the page in the framework as it's very hard to fix
-public class loginTest {
+public class LoginTest {
     static browserUtil bUtil; 
     Page testPage;
-    static loginPage hM; 
+    static LoginPage hM; 
     static InventoryPage iP;
-    checkOut checkOut;
-    cartPage cartPge;
+    CheckOut checkOut;
+    CartPage cartPge;
     String url = "https://www.saucedemo.com/v1/";
     List<String> items = Arrays.asList("Sauce Labs Backpack", "Sauce Labs Bike Light");
     List<String> noItems = Arrays.asList("Sauce Labs Backpack", "Sauce Labs Bike Light");
@@ -39,10 +40,10 @@ public class loginTest {
     @Before
     public void setup() {
         testPage = bUtil.newPage(); // Fresh page per test
-        hM = new loginPage(testPage);
+        hM = new LoginPage(testPage);
         iP = new InventoryPage(testPage);
-        checkOut = new checkOut(testPage);
-        cartPge = new cartPage(testPage); // One browser per test run will have multiple tabs when running all the tests at the same time
+        checkOut = new CheckOut(testPage);
+        cartPge = new CartPage(testPage); // One browser per test run will have multiple tabs when running all the tests at the same time
     }
 
     @Test

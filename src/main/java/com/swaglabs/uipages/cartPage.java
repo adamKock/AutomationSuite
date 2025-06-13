@@ -5,11 +5,11 @@ import com.microsoft.playwright.Page;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import com.microsoft.playwright.options.AriaRole;
 
-public class cartPage {
+public class CartPage {
     static Page page;
     static InventoryPage iP = new InventoryPage(page);
 
-    public cartPage(Page page) {
+    public CartPage(Page page) {
         this.page = page;
     }
 

@@ -4,11 +4,11 @@ import com.microsoft.playwright.Page;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import com.microsoft.playwright.options.AriaRole;
 
-public class checkOut {
+public class CheckOut {
 
     private Page page;
 
-    public checkOut(Page page) {
+    public CheckOut(Page page) {
         this.page = page;
     }
 

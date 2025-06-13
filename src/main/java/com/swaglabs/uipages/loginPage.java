@@ -9,12 +9,12 @@ import com.microsoft.playwright.options.AriaRole;
 
 
 
-public class loginPage {
+public class LoginPage {
     static String url = "https://www.saucedemo.*"; 
 
     private Page page; 
 
-    public loginPage(Page page) {
+    public LoginPage(Page page) {
         this.page = page;
     }   
 

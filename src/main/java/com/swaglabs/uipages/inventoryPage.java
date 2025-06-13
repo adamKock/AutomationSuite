@@ -24,13 +24,13 @@ public class InventoryPage {
      * @param postalCode         Postal code for checkout form
      */
     private final Page page;
-    private final checkOut checkOut;
-    private final cartPage cartPge; 
+    private final CheckOut checkOut;
+    private final CartPage cartPge; 
 
-     public InventoryPage(Page page) {
+    public InventoryPage(Page page) {
     this.page = page; // Ensures 'page' is assigned
-    this.checkOut = new checkOut(page);
-    this.cartPge = new cartPage(page);
+    this.checkOut = new CheckOut(page);
+    this.cartPge = new CartPage(page);
     }
     
      
