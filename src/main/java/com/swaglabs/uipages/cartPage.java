@@ -6,9 +6,8 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 import com.microsoft.playwright.options.AriaRole;
 
 public class CartPage {
-    static Page page;
-    static InventoryPage iP = new InventoryPage(page);
-
+    private Page page;
+    
     public CartPage(Page page) {
         this.page = page;
     }

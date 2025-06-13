@@ -46,8 +46,7 @@ public class InventoryPage {
            page.getByRole(AriaRole.COMBOBOX).selectOption(new SelectOption().setLabel("Price (low to high)"));
            sUtil.screenshotUtil(page, "low_to_high_" + System.currentTimeMillis() + ".png");
            System.out.println("Low to high selected");
-           Thread.sleep(1000); 
-           page.getByRole(AriaRole.COMBOBOX).selectOption(new SelectOption().setLabel("Name (Z to A)"));
+           page.waitForTimeout(1000); // Waits 1 second (1000ms)
            sUtil.screenshotUtil(page, "z_to_a_" + System.currentTimeMillis() + ".png");
            System.out.println("Z-A Selected");
        }
